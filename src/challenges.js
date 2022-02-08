@@ -56,13 +56,38 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+ let distancia1 = Math.abs(cat1 - mouse); 
+ let distancia2 = Math.abs(cat2 - mouse);
 
+ if (distancia1 < distancia2) {
+   return 'cat1';
+  } else if (distancia2 < distancia1) {
+   return 'cat2';
+  } else (distancia1 == distancia2) 
+   return 'os gatos trombam e o rato foge'
 }
+
+// usei Math.abs porque o João Pster usou (vi no slack). Procurei entender pq usar antes de usar.. vi nos erros que (mouse = 1, cat1 = 0, cat2 = 2). 
+// cat1 - mouse = -1 e cat2 - mouse = 1. A resposta dava sempre 'cat1' pq -1 é < 1. Vi que o Math.abs retorna o valor 
+// absuloto de um número assim igualando as duas distancias e condicionando o meu return 'os gatos trombam e o rato foge' acontecer 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(array) {
+  let newArray = []
+  for (let i = 0; i < array.length; i +=1) {
+      if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+      newArray.push(array[i] = "fizzBuzz");
+    } else if (array[i] % 3 == 0) {
+      newArray.push(array[i] = "fizz");
+    } else if (array[i] % 5 == 0) {
+      newArray.push(array[i] = "buzz");
+    } else {
+      newArray.push(array[i] = "bug!");
+    } 
+  }
+  return newArray;
+  }
+
 
 // Desafio 9
 function encode() {
