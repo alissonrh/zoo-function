@@ -41,6 +41,8 @@ function footballPoints(wins, ties) {
   return result
 }
 
+
+
 // Desafio 6
 function highestCount(array) {
   
@@ -87,15 +89,34 @@ function fizzBuzz(array) {
   }
   return newArray;
   }
+   
+
+ 
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(myString) {
+
+  let myStringAtt = myString
+    .replace(/a/gi,'1')
+    .replace(/e/gi,'2')
+    .replace(/i/gi,'3')
+    .replace(/o/gi,'4')
+    .replace(/u/gi,'5');
+  return myStringAtt
 }
-function decode() {
+  
+function decode(myStringD) {
   // seu código aqui
+  let myStringAttD = myStringD
+    .replace(/1/gi,'a')
+    .replace(/2/gi,'e')
+    .replace(/3/gi,'i')
+    .replace(/4/gi,'o')
+    .replace(/5/gi,'u');
+  return myStringAttD
 }
+
 
 // Desafio 10
 function techList() {
