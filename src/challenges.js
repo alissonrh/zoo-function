@@ -118,10 +118,30 @@ function decode(myStringD) {
 }
 
 
+
+
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let list = [];
+  if (array.length === 0) {
+    return "Vazio!"
+  }
+   array.sort()
+   for(let i = 0; i < array.length; i += 1){
+      list.push (
+      {
+        tech: array[i],
+        name: name
+      }
+    );
+  }
+  return list
 }
+ 
+  //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"].sort(), "Alisson"));
+  // ordenar a lista antes de criar um array com objetos 
+  //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Alisson"));
+
 
 module.exports = {
   calcArea,
