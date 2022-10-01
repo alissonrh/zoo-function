@@ -103,7 +103,7 @@ function encode(myString) {
     .replace(/i/gi,'3')
     .replace(/o/gi,'4')
     .replace(/u/gi,'5');
-  return myStringAtt
+  return myStringAtt;
 }
   
 function decode(myStringD) {
@@ -116,6 +116,8 @@ function decode(myStringD) {
     .replace(/5/gi,'u');
   return myStringAttD
 }
+
+
 
 
 
